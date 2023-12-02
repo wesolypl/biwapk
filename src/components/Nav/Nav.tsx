@@ -5,7 +5,7 @@ import { FaMap, FaPlus } from "react-icons/fa6";
 export const Nav = () => {
   return (
     <header className="flex w-full h-12 flex-shrink-0">
-      <nav className="container flex mx-auto justify-between items-center text-blue-600">
+      <nav className="container flex mx-auto justify-between items-center text-blue-600 px-2">
         <Link
           href="/"
           className="font-bold hover:text-blue-700 transition-colors text-lg"
