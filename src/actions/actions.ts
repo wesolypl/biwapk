@@ -1,12 +1,15 @@
 "use server";
 
+import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
+import { getServerSession } from "next-auth";
 import { revalidatePath } from "next/cache";
 
 const API_URL = process.env.GEOAPI_URL as string;
 const API_KEY = process.env.GEOAPI_KEY as string;
 
 export async function createPlace(prevState: any, data: FormData) {
+  const session = await getServerSession(authOptions);
   try {
     const userStreet = data.get("street") as string;
     const zipCode = data.get("zipCode") as string;
@@ -31,6 +34,7 @@ export async function createPlace(prevState: any, data: FormData) {
         lon,
         lat,
         country,
+        authorId: session?.user.id,
       },
     });
 
