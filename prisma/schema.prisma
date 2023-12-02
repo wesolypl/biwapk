@@ -15,7 +15,7 @@ datasource db {
 model Place {
   id Int @id @default(autoincrement())
   createdAt DateTime @default(now())
-  name String @unique
+  name String
   description String
   street String
   zipCode String

@@ -4,6 +4,7 @@ import { createPlace } from "@/actions/actions";
 import { useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import { redirect } from "next/navigation";
+import { buttonClasses, inputClasses, labelClasses } from "@/styles";
 
 const initialState: { message: string | null; success: boolean | null } = {
   message: null,
@@ -14,7 +15,7 @@ const SubmitButton = () => {
   const { pending } = useFormStatus();
   return (
     <button
-      className="bg-green-500 p-2 text-white rounded-md mt-4 hover:bg-green-700 transition-colors"
+      className={`${buttonClasses} mt-4`}
       aria-disabled={pending}
       disabled={pending}
     >
@@ -35,32 +36,32 @@ export const CreateForm = () => {
 
   return (
     <form action={formAction} className="flex flex-col flex-grow-0">
-      <label htmlFor="name" className="flex flex-col">
-        Nazwa:
-        <input name="name" type="text" className="border" />
+      <label htmlFor="name" className={labelClasses}>
+        Nazwa*:
+        <input name="name" type="text" className={inputClasses} />
       </label>
-      <label htmlFor="description" className="flex flex-col mt-2">
-        Opis:
-        <textarea name="description" className="border"></textarea>
+      <label htmlFor="description" className={labelClasses}>
+        Opis*:
+        <textarea name="description" className={inputClasses}></textarea>
       </label>
-      <label htmlFor="street" className="flex flex-col mt-2">
-        Ulica:
-        <input name="street" type="text" className="border" />
+      <label htmlFor="street" className={labelClasses}>
+        Ulica*:
+        <input name="street" type="text" className={inputClasses} />
       </label>
-      <label htmlFor="zipCode" className="flex flex-col mt-2">
-        Kod pocztowy:
-        <input name="zipCode" type="text" className="border" />
+      <label htmlFor="zipCode" className={labelClasses}>
+        Kod pocztowy*:
+        <input name="zipCode" type="text" className={inputClasses} />
       </label>
-      <label htmlFor="city" className="flex flex-col mt-2 ">
-        Miasto:
-        <input name="city" type="text" className="border" />
+      <label htmlFor="city" className={labelClasses}>
+        Miasto*:
+        <input name="city" type="text" className={inputClasses} />
       </label>
-      <label htmlFor="country" className="flex flex-col mt-2">
-        Kraj:
+      <label htmlFor="country" className={labelClasses}>
+        Kraj*:
         <input
           name="country"
           type="text"
-          className="border"
+          className={inputClasses}
           defaultValue="Polska"
         />
       </label>

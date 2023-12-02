@@ -1,9 +1,10 @@
+import { buttonClasses } from "@/styles";
 import Link from "next/link";
 import { FaMap, FaPlus } from "react-icons/fa6";
 
 export const Nav = () => {
   return (
-    <header className="flex w-full h-12">
+    <header className="flex w-full h-12 flex-shrink-0">
       <nav className="container flex mx-auto justify-between items-center text-blue-600">
         <Link
           href="/"
@@ -22,10 +23,7 @@ export const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href="/edit"
-              className="flex gap-2 items-center rounded-md bg-blue-600 text-white py-1 px-2 hover:bg-blue-700 transition-colors"
-            >
+            <Link href="/edit" className={buttonClasses}>
               <FaPlus className="text-xl" />
               Dodaj
             </Link>
