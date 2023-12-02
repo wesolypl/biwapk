@@ -38,7 +38,7 @@ export const CreateForm = () => {
     <form action={formAction} className="flex flex-col flex-grow-0">
       <label htmlFor="name" className={labelClasses}>
         Nazwa*:
-        <input name="name" type="text" className={inputClasses} />
+        <input name="name" type="text" className={inputClasses} required />
       </label>
       <label htmlFor="description" className={labelClasses}>
         Opis*:
@@ -46,15 +46,15 @@ export const CreateForm = () => {
       </label>
       <label htmlFor="street" className={labelClasses}>
         Ulica*:
-        <input name="street" type="text" className={inputClasses} />
+        <input name="street" type="text" className={inputClasses} required />
       </label>
       <label htmlFor="zipCode" className={labelClasses}>
         Kod pocztowy*:
-        <input name="zipCode" type="text" className={inputClasses} />
+        <input name="zipCode" type="text" className={inputClasses} required />
       </label>
       <label htmlFor="city" className={labelClasses}>
         Miasto*:
-        <input name="city" type="text" className={inputClasses} />
+        <input name="city" type="text" className={inputClasses} required />
       </label>
       <label htmlFor="country" className={labelClasses}>
         Kraj*:
@@ -63,6 +63,7 @@ export const CreateForm = () => {
           type="text"
           className={inputClasses}
           defaultValue="Polska"
+          required
         />
       </label>
       <SubmitButton />
