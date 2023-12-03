@@ -10,7 +10,10 @@ type MapProps = {
   places: Place[];
 };
 
-const marketIcon = new L.Icon({ iconUrl: "/assets/location-dot-solid.svg" });
+const marketIcon = new L.Icon({
+  iconUrl: "/assets/location-dot-solid.svg",
+  className: "marker",
+});
 
 export const Map = (props: MapProps) => {
   const { places } = props;
