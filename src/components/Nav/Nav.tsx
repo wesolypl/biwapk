@@ -1,10 +1,8 @@
 import { buttonClasses } from "@/styles";
-import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { FaMap, FaPlus, FaUser } from "react-icons/fa6";
 
 export const Nav = async () => {
-  const session = await getServerSession();
   return (
     <header className="flex w-full h-12 flex-shrink-0">
       <nav className="container flex mx-auto justify-between items-center text-blue-600 px-2">
@@ -31,15 +29,9 @@ export const Nav = async () => {
             </Link>
           </li>
           <li>
-            {session ? (
-              <Link href="/api/auth/signout">
-                <FaUser />
-              </Link>
-            ) : (
-              <Link href="/api/auth/signin">
-                <FaUser />
-              </Link>
-            )}
+            <Link href="/auth/signout">
+              <FaUser />
+            </Link>
           </li>
         </ul>
       </nav>
