@@ -42,6 +42,8 @@ export const CreateForm = () => {
       </label>
       <label htmlFor="description" className={labelClasses}>
         Opis*:
+        <br />
+        Możesz podać np.: informacje o warunkach, finansach, dane kontaktowe.
         <textarea name="description" className={inputClasses}></textarea>
       </label>
       <label htmlFor="street" className={labelClasses}>

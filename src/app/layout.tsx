@@ -6,7 +6,7 @@ import { Nav } from "@/components/Nav";
 const inter = Inter({ subsets: ["latin-ext"] });
 
 export const metadata: Metadata = {
-  title: "Biwapk",
+  title: "Biwapka",
   description: "Wszystkie miejsca na Twój biwak w jednym miejscu",
 };
 

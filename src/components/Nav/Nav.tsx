@@ -12,7 +12,7 @@ export const Nav = async () => {
           href="/"
           className="font-bold hover:text-blue-700 transition-colors text-lg"
         >
-          Biwapk
+          Biwapka
         </Link>
         <ul className="flex items-center gap-4">
           <li>

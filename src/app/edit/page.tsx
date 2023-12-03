@@ -27,13 +27,6 @@ export default async function Edit() {
       <div className="flex flex-col border rounded-md shadow-sm max-w-auto min-w-[50%] mx-auto p-4">
         <header>
           <h1 className="text-lg font-bold">Dodaj nowe miejsce</h1>
-          <p className="text-sm">Uzupełnij formularz</p>
-          <p className="text-sm">
-            W opisie możesz podać np. informacje kontaktowe, warunki.
-          </p>
-          <p className="text-sm">
-            Opis będzie widoczny tylko dla zalogowanych użytkowników.
-          </p>
         </header>
         <main>
           <CreateForm />
