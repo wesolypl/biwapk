@@ -15,7 +15,7 @@ const SubmitButton = () => {
   const { pending } = useFormStatus();
   return (
     <button
-      className={`${buttonClasses} mt-4`}
+      className={`${buttonClasses} mt-4 px-8 py-4`}
       aria-disabled={pending}
       disabled={pending}
     >

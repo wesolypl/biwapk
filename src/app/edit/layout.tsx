@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-const AuthLayout = ({ children }: { children: ReactNode }) => {
+const EditLayout = ({ children }: { children: ReactNode }) => {
   return (
     <div className="container mx-auto p-2 h-full flex items-center justify-center">
       {children}
@@ -8,4 +8,4 @@ const AuthLayout = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default AuthLayout;
+export default EditLayout;
